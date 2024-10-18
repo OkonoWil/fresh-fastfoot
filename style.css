@@ -128,7 +128,8 @@ header .hero_section .left p{
     margin-top: 30px;
 }
 
-header .hero_section .left button{
+header .hero_section .left button, 
+#about button.about_btn {
     color: white;
     background-color: var(--color-primary);
     border: none;
@@ -147,3 +148,61 @@ header .hero_section .right img{
     width: 100%;
 }
 /* =========================== END Header ================================ */
+
+/* =========================== About ================================ */
+#about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .about_main{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about .about_main .image, #about .about_main .about_text{
+    width: 50%;
+}
+
+#about .about_main .image img{
+    width: 100%;
+}
+
+#about .about_main .about_text h2{
+    font-size: 55px;
+    color: black;
+}
+
+#about .about_main .about_text h2 span{
+    color: var(--color-primary);
+    font-family: mv boli;
+}
+
+#about .about_main .about_text h3{
+    font-size: 30px;
+    color: black;
+    margin-top: 10px;
+}
+
+#about .about_main .about_text p{
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+
+#about button.about_btn{
+    margin-top: 0;
+}
+
+/* =========================== END About ================================ */
+
+
+/* =========================== Menu ================================ */
+
+
+/* =========================== END Menu ================================ */

@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    transition: 0.3s;
 }
 
 html{
@@ -207,17 +208,17 @@ header .hero_section .right img{
 
 
 /* =========================== Menu ================================ */
-#about {
+#menu, #gallery{
     width: 100%;
     display: flex;
     position: relative;
     flex-direction: column;
-    margin: 40px 0;
+    margin: 120px 0;
     align-items: center;
     justify-content: center;
 }
 
-#menu h1{
+#menu h1, #gallary h1{
     display: block;
     font-size: 55px;
     color: black;
@@ -228,13 +229,13 @@ header .hero_section .right img{
     align-items: center;
 }
 
-#menu h1 span{
+#menu h1 span, #gallary h1 span{
     color: var(--color-primary);
     font-family: mv boli;
     position: relative;
 }
 
-#menu h1 span::after{
+#menu h1 span::after, #gallary h1 span::after{
     content: '';
     display: block;
     height: 3px;
@@ -370,3 +371,72 @@ header .hero_section .right img{
     background-color: var(--color-primary);
 }
 /* =========================== END Menu ================================ */
+
+/* =========================== Gallary ================================ */
+#gallary .gallary_box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#gallary .gallary_box .image {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+#gallary .gallary_box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#gallary .gallary_box .image .image_info {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    padding: 20px 25px;
+    transition: 0.3s;
+}
+
+#gallary .gallary_box .image:hover .image_info{
+    display: flex;
+}
+
+#gallary .gallary_box .image .image_info h2{
+    color: var(--color-primary);
+}
+
+#gallary .gallary_box .image .image_info p{
+    text-align: center;
+    color: white;
+    margin: 25px 0;
+}
+
+#gallary .gallary_box .image .image_info a{
+    padding: 10px 25px;
+    background-color: var(--color-primary);
+    text-decoration: none;
+    color: black;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .3s;
+}
+
+#gallary .gallary_box .image:hover .image_info a{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* =========================== END Gallary ================================ */

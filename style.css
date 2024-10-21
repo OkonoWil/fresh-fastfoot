@@ -208,7 +208,7 @@ header .hero_section .right img{
 
 
 /* =========================== Menu ================================ */
-#menu, #gallery, #review{
+#menu, #gallery, #review, #order{
     width: 100%;
     display: flex;
     position: relative;
@@ -218,7 +218,7 @@ header .hero_section .right img{
     justify-content: center;
 }
 
-#menu h1, #gallary h1, #review h1{
+#menu h1, #gallary h1, #review h1, #order h1{
     display: block;
     font-size: 55px;
     color: black;
@@ -229,14 +229,14 @@ header .hero_section .right img{
     align-items: center;
 }
 
-#menu h1 span, #gallary h1 span, #review h1 span{
+#menu h1 span, #gallary h1 span, #review h1 span, #order h1 span{
     color: var(--color-primary);
     font-family: mv boli;
     position: relative;
 }
 
 #menu h1 span::after, #gallary h1 span::after,
-#review h1 span::after {
+#review h1 span::after, #order h1 span::after{
     content: '';
     display: block;
     height: 3px;
@@ -438,12 +438,14 @@ header .hero_section .right img{
     transform: translateY(0);
     opacity: 1;
 }
-
-
 /* =========================== END Gallary ================================ */
+
+
+/* =========================== Review ================================ */
 #review .review_box { 
     margin-top: 60px;
 }
+
 #review .review_box .review_card{ 
     width: 100%;
     height: 100%;
@@ -453,6 +455,7 @@ header .hero_section .right img{
     padding: 8px 20px;
     margin: 0 8px;
 }
+
 #review .review_box .review_card .review_profile{
     display: flex;
     justify-content: center;
@@ -460,9 +463,11 @@ header .hero_section .right img{
     position: relative;
     transition: 0.3s;
 }
+
 #review .review_box .review_card:hover .review_profile{
     transform: translateY(-60px);
 }
+
 #review .review_box .review_card .review_profile img{
     border-radius: 100%;
     width: 170px;
@@ -471,23 +476,29 @@ header .hero_section .right img{
     object-position: center;
     border: 5px solid rgba(83, 83, 84, 0.5) ;
 }
+
 #review .review_box .review_card .review_text{
     text-align: center;
 }
+
 #review .review_box .review_card .review_text .name{
     color: black;
     transition: 0.3s;
 }
+
 #review .review_box .review_card:hover .review_text .name{
     transform: translateY(-50px);
 }
+
 #review .review_box .review_card .review_text .review_icon{
     color: var(--color-primary);
     transition: 0.3s;
 }
+
 #review .review_box .review_card:hover .review_text .review_icon{
     transform: translateY(-30px);
 }
+
 #review .review_box .review_card .review_text .review_social i{
     margin: 5px 1px;
     font-size: 15px;
@@ -495,11 +506,80 @@ header .hero_section .right img{
     cursor: pointer;
     transition: 0.3s;
 }
+
 #review .review_box .review_card:hover .review_text .review_social i{
     opacity: 1;
     transform: translateY(-8px);
 }
+
 #review .review_box .review_card .review_text p{
     text-align: center;
 
 }
+/* =========================== End Review ================================ */
+
+/* =========================== Order ================================ */
+#order{
+    background-image: url(./assets/images/bg2.jpg);
+}
+
+#order h1 span {
+    margin-right: 10px;
+}
+
+#order .order_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#order .order_main .order_image{
+    width: 45%;
+}
+
+#order .order_main .order_image img {
+    width: 100%;
+}
+
+#order .order_main form {
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 10px;
+}
+
+#order .order_main form .input {
+    width: 100%;
+    margin: 5px;
+}
+
+#order .order_main form .input label {
+    line-height: 25px;
+}
+
+#order .order_main form .input input {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    outline: none;
+    border-radius:  3px;
+}
+
+#order .order_main form .input input:focus {
+    border: 2px solid var(--color-primary);
+}
+
+#order .order_main form .order_btn {
+    padding: 10px 30px;
+    background-color: var(--color-primary);
+    color: white;
+    width: 60%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+
+/* =========================== End Order ================================ */

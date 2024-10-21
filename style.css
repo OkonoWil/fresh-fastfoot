@@ -15,6 +15,10 @@ html{
 }
 
 body{
+    width: 100%;
+    overflow-x: hidden;
+}
+main{
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -152,6 +156,9 @@ header .hero_section .right img{
 
 /* =========================== About ================================ */
 #about{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     display: flex;
     position: relative;
@@ -208,7 +215,7 @@ header .hero_section .right img{
 
 
 /* =========================== Menu ================================ */
-#menu, #gallery, #review, #order{
+#menu, #gallery, #review, #order, #team{
     width: 100%;
     display: flex;
     position: relative;
@@ -218,7 +225,7 @@ header .hero_section .right img{
     justify-content: center;
 }
 
-#menu h1, #gallary h1, #review h1, #order h1{
+#menu h1, #gallary h1, #review h1, #order h1, #team h1{
     display: block;
     font-size: 55px;
     color: black;
@@ -229,7 +236,7 @@ header .hero_section .right img{
     align-items: center;
 }
 
-#menu h1 span, #gallary h1 span, #review h1 span, #order h1 span{
+#menu h1 span, #gallary h1 span, #review h1 span, #order h1 span, #team h1 span{
     color: var(--color-primary);
     font-family: mv boli;
     position: relative;
@@ -581,5 +588,152 @@ header .hero_section .right img{
     text-decoration: none;
 }
 
-
 /* =========================== End Order ================================ */
+
+/* =========================== Team ================================ */
+#team {
+    background-image: url(./assets/images/bg1.jpg);
+    padding-bottom: 100px;
+}
+
+#team h1 span {
+    margin-left: 10px;
+}
+
+#team .team_box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 75px;
+    gap: 15px;
+}
+
+#team .team_box .profile {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+#team .team_box .profile:hover {
+    border-radius: 20px;
+    height: 270px;
+}
+
+#team .team_box .profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+
+#team .team_box .profile:hover img {
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+#team .team_box .profile .info {
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    transition: 0.4s;
+}
+
+#team .team_box .profile:hover .info {
+    top: 48%;
+}
+
+#team .team_box .profile .info .name {
+    color: #fac031;
+    margin-bottom: 10px;
+}
+
+#team .team_box .profile .info .bio {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+#team .team_box .profile .info .team_icon i {
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#team .team_box .profile .info .team_icon i:hover {
+    color: #fac031;
+}
+/* =========================== End Team ================================ */
+
+/*Footer*/
+
+footer {
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+
+footer .footer_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag {
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2 {
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p {
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover {
+    color: #fac031;
+}
+
+footer .end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span {
+    color: #fac031;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #fac031;
+    border-radius: 15px;
+}

@@ -208,7 +208,7 @@ header .hero_section .right img{
 
 
 /* =========================== Menu ================================ */
-#menu, #gallery{
+#menu, #gallery, #review{
     width: 100%;
     display: flex;
     position: relative;
@@ -218,7 +218,7 @@ header .hero_section .right img{
     justify-content: center;
 }
 
-#menu h1, #gallary h1{
+#menu h1, #gallary h1, #review h1{
     display: block;
     font-size: 55px;
     color: black;
@@ -229,13 +229,14 @@ header .hero_section .right img{
     align-items: center;
 }
 
-#menu h1 span, #gallary h1 span{
+#menu h1 span, #gallary h1 span, #review h1 span{
     color: var(--color-primary);
     font-family: mv boli;
     position: relative;
 }
 
-#menu h1 span::after, #gallary h1 span::after{
+#menu h1 span::after, #gallary h1 span::after,
+#review h1 span::after {
     content: '';
     display: block;
     height: 3px;
@@ -246,7 +247,7 @@ header .hero_section .right img{
     bottom: 13px;
 }
 
-#menu .menu_box{
+#menu .menu_box, #review .review_box {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -440,3 +441,65 @@ header .hero_section .right img{
 
 
 /* =========================== END Gallary ================================ */
+#review .review_box { 
+    margin-top: 60px;
+}
+#review .review_box .review_card{ 
+    width: 100%;
+    height: 100%;
+    min-height: min-content;
+    box-shadow: 0 2px 8px rgba(0,0,0, 0.5);
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+#review .review_box .review_card .review_profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+}
+#review .review_box .review_card:hover .review_profile{
+    transform: translateY(-60px);
+}
+#review .review_box .review_card .review_profile img{
+    border-radius: 100%;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid rgba(83, 83, 84, 0.5) ;
+}
+#review .review_box .review_card .review_text{
+    text-align: center;
+}
+#review .review_box .review_card .review_text .name{
+    color: black;
+    transition: 0.3s;
+}
+#review .review_box .review_card:hover .review_text .name{
+    transform: translateY(-50px);
+}
+#review .review_box .review_card .review_text .review_icon{
+    color: var(--color-primary);
+    transition: 0.3s;
+}
+#review .review_box .review_card:hover .review_text .review_icon{
+    transform: translateY(-30px);
+}
+#review .review_box .review_card .review_text .review_social i{
+    margin: 5px 1px;
+    font-size: 15px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#review .review_box .review_card:hover .review_text .review_social i{
+    opacity: 1;
+    transform: translateY(-8px);
+}
+#review .review_box .review_card .review_text p{
+    text-align: center;
+
+}
